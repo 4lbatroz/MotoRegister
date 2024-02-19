@@ -1,56 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
-<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/2.3.1/css/bootstrap.min.css">
-
 
 <head>
     <meta charset="UTF-8">
     <title>Kunder</title>
 
+    <!-- Eksterne biblioteker: jQuery og Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/2.3.1/css/bootstrap.min.css">
 </head>
-<body>
-    <h1>Registrering</h1>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-4">
-                <h1>Motorvognregister</h1>
-                <form class="form">
-                    <div class="form-group">
-                        <label for="personnr">Person nummer</label>
-                        <input type="text" class="form-control" id="personnr"/>
-                    </div>
-                    <div class="form-group">
-                        <label for="navn">Navn</label>
-                        <input type="text" class="form-control" id="navn"/>
-                    </div>
-                    <div class="form-group">
-                        <label for="adresse">Adresse</label>
-                        <input type="text" class="form-control" id="adresse"/>
-                    </div>
-                    <div class="form-group">
-                        <label for="kjennetegn">Kjennetegn</label>
-                        <input type="text" class="form-control" id="kjennetegn"/>
-                    </div>
-                    <div class="form-group">
-                        <label for="merke">Merke</label>
-                        <input type="text" class="form-control" id="merke"/>
-                    </div>
-                    <div class="form-group">
-                        <label for="type">Type</label>
-                        <input type="text" class="form-control" id="type"/>
-                    </div>
 
-                    <input type="button" class="form-control" onclick="regMotorvogn()" value="Submit"/>
-                </form>
-            </div>
-            <div class="col-md-8">
-                <h3>Alle bilene:</h3>
-                <div id="bilene" class="table-responsive"></div>
-                <button class="btn btn-danger" onclick="slettAlle()">Slett alle biler</button>
-            </div>
+<body>
+<!-- Overskrift -->
+<h1>Registrering</h1>
+
+<!-- Container for innhold -->
+<div class="container">
+    <!-- Oppdeling i rader og kolonner -->
+    <div class="row">
+        <!-- Venstre kolonne (col-md-4) -->
+        <div class="col-md-4">
+            <!-- Tittel for Motorvognregister-seksjonen -->
+            <h1>Motorvognregister</h1>
+
+            <!-- Registreringsskjema -->
+            <form class="form">
+                <!-- Inndatafelt for personnummer -->
+                <div class="form-group">
+                    <label for="personnr">Person nummer</label>
+                    <input type="text" class="form-control" id="personnr" />
+                </div>
+
+                <!-- Inndatafelt for navn -->
+                <div class="form-group">
+                    <label for="navn">Navn</label>
+                    <input type="text" class="form-control" id="navn" />
+                </div>
+
+                <!-- Inndatafelt for adresse -->
+                <div class="form-group">
+                    <label for="adresse">Adresse</label>
+                    <input type="text" class="form-control" id="adresse" />
+                </div>
+
+                <!-- Inndatafelt for kjennetegn -->
+                <div class="form-group">
+                    <label for="kjennetegn">Kjennetegn</label>
+                    <input type="text" class="form-control" id="kjennetegn" />
+                </div>
+
+                <!-- Inndatafelt for merke -->
+                <div class="form-group">
+                    <label for="merke">Merke</label>
+                    <input type="text" class="form-control" id="merke" />
+                </div>
+
+                <!-- Inndatafelt for type -->
+                <div class="form-group">
+                    <label for="type">Type</label>
+                    <input type="text" class="form-control" id="type" />
+                </div>
+
+                <!-- Knapp for å sende inn skjemaet -->
+                <input type="button" class="form-control" onclick="regMotorvogn()" value="Submit" />
+            </form>
+        </div>
+
+        <!-- Høyre kolonne (col-md-8) -->
+        <div class="col-md-8">
+            <!-- Overskrift for visning av alle biler -->
+            <h3>Alle bilene:</h3>
+
+            <!-- Container for tabell med biler -->
+            <div id="bilene" class="table-responsive"></div>
+
+            <!-- Knapp for å slette alle biler -->
+            <button class="btn btn-danger" onclick="slettAlle()">Slett alle biler</button>
         </div>
     </div>
-    <script src="kunde.js"></script>
+</div>
+
+<!-- Skript for å håndtere registrering av motorvogn og annen funksjonalitet -->
+<script src="kunde.js"></script>
 </body>
+
 </html>

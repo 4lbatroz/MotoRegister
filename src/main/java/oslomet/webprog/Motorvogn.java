@@ -1,27 +1,39 @@
+// Pakke- og import-setninger
 package oslomet.webprog;
 
 import javax.persistence.Column;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+// Entitetsklasse som representerer Motorvogn i databasen
 @Table(name ="Motorvogn")
 public class Motorvogn {
+
+    // Primærnøkkel-ID for entiteten
     @Id
     @Column(name = "ID")
     private String id;
+
+    // Attributter som tilsvarer kolonnene i Motorvogn-tabellen
     @Column(name = "PERSONNR")
     private String personnr;
+
     @Column(name = "NAVN")
     private String navn;
+
     @Column(name = "ADRESSE")
     private String adresse;
+
     @Column(name = "KJENNETEGN")
     private String kjennetegn;
+
     @Column(name = "MERKE")
     private String merke;
+
     @Column(name = "TYPE")
     private String type;
 
+    // Konstruktør for å opprette en ny Motorvogn-objekt med attributtverdier
     public Motorvogn(String personnr, String navn, String adresse, String kjennetegn, String merke, String type) {
         this.personnr = personnr;
         this.navn = navn;
@@ -31,9 +43,11 @@ public class Motorvogn {
         this.type = type;
     }
 
+    // Standardkonstruktør (nødvendig for JPA-entiteter)
     public Motorvogn() {
     }
-//gettere og settere
+
+    // Gettere og settere for attributtene
 
     public String getPersonnr() {
         return personnr;
@@ -83,4 +97,3 @@ public class Motorvogn {
         this.type = type;
     }
 }
-
